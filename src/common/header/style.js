@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import logoPic from '../../statics/logo.png';
 
 export const HeaderWrapper = styled.div`
+	z-index: 1;
 	position: relative;
 	height: 56px;
 	border-bottom: 1px solid #f0f0f0;
 `;
 
-export const Logo = styled.a.attrs({
-	href: '/'
-})`
+export const Logo = styled.div`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -48,7 +47,7 @@ export const NavItem = styled.div`
 export const SearchWrapper = styled.div`
 	position: relative;
 	float: left;
-	.iconfont {
+	.zoom {
 		position: absolute;
 		right: 5px;
 		bottom: 5px;
@@ -105,6 +104,7 @@ export const SearchInfo = styled.div`
 	width: 240px;
 	padding: 0 20px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+	background: #fff;
 `;
 
 export const SearchInfoTitle = styled.div`
@@ -118,6 +118,15 @@ export const SearchInfoTitle = styled.div`
 export const SearchInfoSwitch = styled.span`
 	float: right;
 	font-size: 13px;
+	cursor: pointer;
+	.spin {
+		display: block;
+		float: left;
+		font-size: 12px;
+		margin-right: 2px;
+		transition: all .2s ease-in;
+		transform-origin: center center;
+	}
 `;
 
 export const SearchInfoList = styled.div`
@@ -152,7 +161,7 @@ export const Button = styled.div`
 	line-height: 38px;
 	border-radius: 19px;
 	border: 1px solid #ec6149;
-	font-siz: 14px;
+	font-size: 14px;
 	&.reg {
 		color: #ec6149;
 	}
